@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  
+
+  <title> BAKELLO Offers</title>
+  <link rel="stylesheet" href="navOffers.css">
+  <link rel="stylesheet" href="styleOffers.css">
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf0;
+      margin: 40px;
+      color: #333;
+    }
+</style>
+
+</head>
+<body>
+  <header class="header1">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" class="logo-img">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="offers.html" class="active">Offers</a>
+      <a href="contact.html">Contact</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+    </div>
+  </header>
+  
+<br>
+
+  <h2>Our Story</h2>
+  <p>
+From a small kitchen to hundreds of happy customers — your support makes our journey possible!</p>
+
+  <div class="logo">
+    <img src="logo.png" alt="BAKELLO Logo">
+
+  </div>
+
+  <h2>Our Specials</h2>
+  <ul>
+    <li>Carrot cake</li>
+    <li>Fresh bread</li>
+    <li>croissant</li>
+    <li>raspberry muffins</li>
+  </ul>
+
+  <h2>This Week's Offers</h2>
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Discount</th>
+    </tr>
+    <tr>
+      <td>Croissant Box</td>
+      <td>30% Off</td>
+    </tr>
+    <tr>
+      <td>raspberry muffins (6 pcs)</td>
+      <td>Buy 1 Get 1 Free</td>
+    </tr>
+  </table>
+
+  <h2>Special Offer Countdown</h2>
+  <div class="countdown" id="countdown">
+    Offer ends in: loading...
+  </div>
+
+  <script>
+ 
+    const targetDate = new Date("2025-05-29T23:59:59");
+  
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").textContent = "Offer has ended.";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").textContent =
+        `Offer ends in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>

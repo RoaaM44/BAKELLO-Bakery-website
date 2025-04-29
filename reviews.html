@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Reviews</title>
+  <link rel="stylesheet" href="styleAbout&Rev.css">
+  <link rel="stylesheet" href="nav1.css">
+ <style
+ >body {
+  font-family: Arial, sans-serif;
+  background-color: #FFF8F0;
+  color: #333;
+  padding: 20px
+}
+</style>
+</head>
+<body>
+<!-- Header section -->
+<header class="header1">
+  <img src="logo.png" class="logo-img" alt="BAKELLO logo">
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="contact.html">Contact</a>
+    <a href="reviews.html" class="active">Reviews</a>
+  </nav>
+</header>
+<br>
+<br>
+
+
+  <h1>Customer Reviews</h1>
+
+  <div class="reviews-container" id="reviews-list">
+    <div class="review-item">
+      <h3>Delicious Bread!</h3>
+      <div class="stars">★★★★★</div>
+      <p>This bakery has the best bread I've ever had! Always fresh and soft.</p>
+      <span class="customer-name">Laila</span>
+    </div>
+
+    <div class="review-item">
+      <h3>Best Carrot Cake!</h3>
+      <div class="stars">★★★★☆</div>
+      <p>I’ve tried carrot cakes all over the city, and nothing compares to this one!</p>
+      <span class="customer-name">Sara</span>
+    </div>
+  </div>
+
+  <h2>Leave a Review:</h2>
+
+  <input type="text" id="review-input" placeholder="Write your review here">
+  
+  <label for="rating">Rate (1 to 5 stars):</label>
+  <div class="star-rating">
+    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+  </div>
+
+  <input type="text" name="customer-name" id="customer-name" placeholder="Your Name">
+
+  <button onclick="addReview()">Submit</button>
+
+  <script>
+    function addReview() {
+      const reviewInput = document.getElementById("review-input");
+      const reviewText = reviewInput.value.trim();
+      const nameInput = document.getElementById("customer-name");
+      const customerName = nameInput.value.trim();
+      const rating = document.querySelector('input[name="rating"]:checked');
+
+      if (reviewText && customerName && rating) {
+        const reviewContainer = document.getElementById("reviews-list");
+
+        const reviewItem = document.createElement("div");
+        reviewItem.classList.add("review-item");
+
+        const ratingValue = parseInt(rating.value);
+        const stars = '★'.repeat(ratingValue) + '☆'.repeat(5 - ratingValue);
+
+        reviewItem.innerHTML = `
+          <h3>${reviewText}</h3>
+          <div class="stars">${stars}</div>
+          <p>Great bakery with the freshest products!</p>
+          <span class="customer-name">${customerName}</span>
+        `;
+
+        reviewContainer.appendChild(reviewItem);
+        reviewInput.value = "";
+        nameInput.value = "";
+        rating.checked = false;
+      } else {
+        alert("Please write a review, select a rating, and provide your name.");
+      }
+    }
+  </script>
+
+</body>
+</html>

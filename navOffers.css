@@ -1,0 +1,53 @@
+
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ebd0a5;
+    display: flex;
+    justify-content: center; /* لتوسيط جميع العناصر */
+    align-items: center;
+    padding: 3px 10px; /* زوّد البادينق ينزل العناصر */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    gap: 80px; /* مسافة بين اللوجو والنف بار والزر */
+  }
+  
+  
+  .logo-img {
+    width: 80px; /* صغري الرقم هنا لتصغير الشعار */
+  height: auto;
+  margin-left: 30px; 
+    object-fit: contain;
+    margin-top: 50px; /* نزول خفيف */
+    
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 17px;
+    padding: 8px 16px;
+    color: rgb(15, 14, 14);
+    transition: background-color 0.3s, border-radius 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: #95ad97;
+    border-radius: 20px;
+  }
+  
+  .nav-links a.active {
+    background-color: #95ad97;
+    border-radius: 20px;
+    color: #000;
+  }

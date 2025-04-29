@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width ,initial-scale=1.0"/>
+<title>Contact Form </title>
+<link rel="stylesheet" href="styleContact.css"/>
+<link rel="stylesheet" href="nav1.css">
+<script src="ContactJava.js" defer></script>
+<style>
+	.container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;}
+
+	.form{
+width: 100%;
+max-width:820px ;
+background-color:#F5EEDC ;
+	}
+</style>
+</head>
+ <body>
+	<!-- Header section -->
+	<header class="header1">
+		<img src="logo.png" class="logo-img" alt="BAKELLO logo">
+		<nav class="nav-links">
+		  <a href="index.html">Home</a>
+		  <a href="about.html">About</a>
+		  <a href="menu.html">Menu</a>
+		  <a href="offers.html">Offers</a>
+		  <a href="contact.html" class="active">Contact</a>
+		  <a href="reviews.html">Reviews</a>
+		</nav>
+	  </header>
+	  
+	  <br>
+<div class="container">
+	<span class="big-circle"></span>
+
+<div class="form">
+<div class="contact-info"> 
+<p class="text"> 
+communicate via the following account</p>
+	<div class="info"> <div class ="information"> 
+		<img src="location.png" class="icon" alt=""> 
+		<p>In Al-Masif neighborhood, on Omar Street</p> </div>
+			<div class ="information">
+		<img src="email.png"class="icon" alt="">	
+		<p>bakello@gimal.com</p>
+
+		</div>
+			<div class ="information">
+		<img src="phone.png"class="icon" alt="">	
+		<p>057345560</p>
+</div>
+		</div>
+
+		<div class="social-media ">
+			<p>Connect with us:</p>
+			<div class="social-icons ">
+				
+			
+				<a href="https://instagram.com" target="_blank">
+					<img src="instagram.png"alt="Instagram"></a>
+				</a><a href="https://twitter.com" target="_blank">
+					<img src="twitter.png" alt="Twitter"></a>
+			
+			
+			</div>
+		</div>
+
+</div>
+<div class="contact-form">
+<span class="circle one"></span>
+<span class="circle two"></span>
+
+<form action="index.html">
+	<h3 class="title">Contact us</h3>
+	<div class="input-container  ">
+		<input type="text" name="name" class="input" required placeholder="Remas Ali">
+		<lable for="">Username</lable>
+		<span>Username</span>
+	</div>
+	<div class="input-container">
+		<input type="email" name="email" class="input" required placeholder="remas89@gmail.com" 
+		pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+		title="Please match the requested format">
+	    <lable for="">Email</lable>
+	   <span>Email</span>
+
+
+		
+	</div>
+		<div class="input-container">
+		<input type="tel" name="phone" class="input" required placeholder="05********">
+		<lable for="">Phone</lable>
+		<span>Phone</span>
+
+	</div>
+		<div class="input-container textarea focus ">
+		<textarea name="message"class="input" required placeholder="Enter your Message..."></textarea>
+		<lable for="">Messge</lable>
+		<span>Messge</span>
+
+	</div>
+	<input type="submit"value="Send" class="btn"/>
+
+</form>
+
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
