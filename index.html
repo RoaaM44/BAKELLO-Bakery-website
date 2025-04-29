@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAKELLO WEBSITE</title>
+  
+  <!-- Link for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Link for external CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body{
+    font-family: Arial, sans-serif;
+    background-color: #faeac6;
+    color: #333;
+    line-height: 1.6;
+}
+  </style>
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" class="logo-img">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="offers.html">Offers</a>
+      <a href="contact.html">Contact</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+    <div class="header-right">
+      
+      <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      <button class="btn-sign-in">Sign in</button>
+    </div>
+  </header>
+
+  <!-- Popup Boxes -->
+  
+
+  <div id="cartBox" class="popup-box" style="display:none;">
+    <h2>Your Cart 🛒</h2>
+    <p>No items in the cart yet!</p>
+    <button class="close-btn" onclick="closeBox('cartBox')">Close</button>
+  </div>
+
+  <div id="loginBox" class="popup-box" style="display:none;">
+    <h2>Sign In 🔑</h2>
+    <input type="text" class="login-input" placeholder="Username">
+    <input type="password" class="login-input" placeholder="Password">
+    <button class="login-btn">Login</button>
+    <button class="close-btn" onclick="closeBox('loginBox')">Close</button>
+  </div>
+
+  <!-- Main Section -->
+  <section class="main-section">
+    <div class="main-left">
+      <h1 class="main-heading">
+        Indulge in the Sweetest Moments with Our 
+        <span style="color:#859b87;"><br>Freshly Baked Delights</span>
+      </h1>
+      <p class="main-subheading">
+        Freshly Baked Breads, Crafted Daily <br> Served with Love
+      </p>
+
+      <div class="main-buttons">
+        <button class="explore-btn" onclick="location.href='menu.html'">Explore Menu</button>
+        <button class="play-viedo-btn" id="watchVideoBtn">
+          <i class="fa-solid fa-play"></i> Watch Video
+        </button>
+      </div>
+    </div>
+
+    <div class="main-right">
+      <div class="delevery-options">
+        <div class="delevery-option">
+          <i class="fa-solid fa-truck delivery-icon"></i>
+          <div class="delivery-text">
+            <h3>Freshly Baked Delivery 🥐</h3>
+            Warm & Tasty — Straight From the Oven to Your Door
+          </div>
+        </div>
+        <div class="delevery-option">
+          <i class="fa-solid fa-box-open delivery-icon"></i>
+          <div class="delivery-text">
+            <h3>In-Store Pickup 🛍️</h3>
+            Your Favorite Pastries, Ready When You Are
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Video Popup -->
+<div id="videoBox" class="popup-box" style="display: none;">
+  <div class="video-wrapper">
+    <iframe id="videoPlayer"
+      src="https://www.youtube.com/embed/XNXuwrXFHRs?autoplay=1&mute=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <button class="close-btn" onclick="closeBox('videoBox')">Close</button>
+</div>
+
+
+  <!-- Carousel Section -->
+  <section class="carousel-container">
+    <i class="fa-solid fa-chevron-left prev-arrow carousel-arrow"></i>
+    <div class="carousel-inner">
+      <div class="carousel-item bink-bg">
+        <img src="Cookies.jpg" alt="Cookies" class="item-image">
+        <h2 class="item-title">Cookies</h2>
+        <p class="item-price">50 SAR</p>
+      </div>
+      <div class="carousel-item green-bg">
+        <img src="French-Toast.jpg" alt="French Toast" class="item-image">
+        <h2 class="item-title">French Toast</h2>
+        <p class="item-price">60 SAR</p>
+      </div>
+      <div class="carousel-item blue-bg">
+        <img src="Croissants.jpg" alt="Croissants" class="item-image">
+        <h2 class="item-title">Croissants</h2>
+        <p class="item-price">80 SAR</p>
+      </div>
+      <div class="carousel-item red-bg">
+        <img src="Greek Frappe.jpg" alt="Greek Frappe" class="item-image">
+        <h2 class="item-title">Greek Frappe</h2>
+        <p class="item-price">100 SAR</p>
+      </div>
+      <div class="carousel-item reen-bg">
+        <img src="Iced black coffee.jpg" alt="Black Coffee" class="item-image">
+        <h2 class="item-title">Black Coffee</h2>
+        <p class="item-price">20 SAR</p>
+      </div>
+    </div>
+    <i class="fa-solid fa-chevron-right next-arrow carousel-arrow"></i>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="styles.js"></script>
+</body>
+</html>
